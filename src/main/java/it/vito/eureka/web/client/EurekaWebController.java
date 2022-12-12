@@ -1,4 +1,4 @@
-package it.vito.eureka.we.client;
+package it.vito.eureka.web.client;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,8 +16,9 @@ public class EurekaWebController {
     }
 
     @GetMapping
-    public String proces (Model model) {
+    public String process (Model model) {
         String message = restTemplate.getForObject("http://eureka.microservice/process", String.class);
+//        String message = "My message";
         model.addAttribute("mes", message);
         model.addAttribute("time", LocalDateTime.now());
         return "eureka-web-page";
