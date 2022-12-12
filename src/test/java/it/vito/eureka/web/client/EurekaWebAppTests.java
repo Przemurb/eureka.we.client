@@ -1,4 +1,4 @@
-package it.vito.eureka.we.client;
+package it.vito.eureka.web.client;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
